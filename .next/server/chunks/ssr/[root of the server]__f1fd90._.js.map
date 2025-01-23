@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 55, "column": 0}, "map": {"version":3,"sources":["file:///home/patrickgoulart/Desktop/website/src/pages/_document.tsx"],"sourcesContent":["import { Html, Head, Main, NextScript } from \"next/document\";\n\nexport default function Document() {\n  return (\n    <Html lang=\"en\">\n      <Head />\n      <body className=\"antialiased\">\n        <Main />\n        <NextScript />\n      </body>\n    </Html>\n  );\n}\n"],"names":[],"mappings":";;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,qKAAC,yHAAA,CAAA,OAAI;QAAC,MAAK;;0BACT,qKAAC,yHAAA,CAAA,OAAI;;;;;0BACL,qKAAC;gBAAK,WAAU;;kCACd,qKAAC,yHAAA,CAAA,OAAI;;;;;kCACL,qKAAC,yHAAA,CAAA,aAAU;;;;;;;;;;;;;;;;;AAInB"}},
+    {"offset": {"line": 97, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 103, "column": 0}, "map": {"version":3,"sources":["file:///home/patrickgoulart/Desktop/website/src/pages/_app.tsx"],"sourcesContent":["import \"@/styles/globals.css\";\nimport type { AppProps } from \"next/app\";\n\nexport default function App({ Component, pageProps }: AppProps) {\n  return <Component {...pageProps} />;\n}\n"],"names":[],"mappings":";;;;;;AAGe,SAAS,IAAI,EAAE,SAAS,EAAE,SAAS,EAAY;IAC5D,qBAAO,qKAAC;QAAW,GAAG,SAAS;;;;;;AACjC"}},
+    {"offset": {"line": 118, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 124, "column": 0}, "map": {"version":3,"sources":["file:///home/patrickgoulart/Desktop/website/src/components/Login.tsx"],"sourcesContent":["import React from 'react'\n\nexport default function Login() {\n  return (\n<>\n<h2 className='text-center'>Login</h2>\n<div className='flex'>\n  <form className='flex flex-col'>\n    <input type=\"email\" name=\"\" id=\"\" />\n\n    <input type=\"password\" name=\"\" id=\"\" />\n  </form>\n</div>\n</>\n  )\n}\n"],"names":[],"mappings":";;;;;AAEe,SAAS;IACtB,qBACF;;0BACA,qKAAC;gBAAG,WAAU;0BAAc;;;;;;0BAC5B,qKAAC;gBAAI,WAAU;0BACb,cAAA,qKAAC;oBAAK,WAAU;;sCACd,qKAAC;4BAAM,MAAK;4BAAQ,MAAK;4BAAG,IAAG;;;;;;sCAE/B,qKAAC;4BAAM,MAAK;4BAAW,MAAK;4BAAG,IAAG;;;;;;;;;;;;;;;;;;;AAKtC"}},
+    {"offset": {"line": 177, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 183, "column": 0}, "map": {"version":3,"sources":["file:///home/patrickgoulart/Desktop/website/src/pages/index.tsx"],"sourcesContent":["import Login from '@/components/Login'\nimport React from 'react'\n\nexport default function index() {\n  return (\n    <Login></Login>\n \n  )\n}\n"],"names":[],"mappings":";;;;AAAA;;;AAGe,SAAS;IACtB,qBACE,qKAAC,oHAAA,CAAA,UAAK;;;;;AAGV"}},
+    {"offset": {"line": 197, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
