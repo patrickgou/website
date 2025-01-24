@@ -3,22 +3,22 @@ import { useRouter } from 'next/router';
 
 export default function Login() {
   const router = useRouter();
-  const [username, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
-    const response = await fetch('/api/login', {
+    const response = await fetch('https://johandler.fly.dev/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
     if (response.ok) {
-      setMessage(`Bem-vindo, ${username}!`);
+      setMessage(`Bem-vindo, ${email}!`);
       // Aqui você pode salvar o token, por exemplo, no localStorage
       // localStorage.setItem('token', data.token);
     } else {
@@ -36,7 +36,7 @@ export default function Login() {
               Email
             </label>
             <input
-              value={username}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               type="email"

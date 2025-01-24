@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Register() {
   const router = useRouter();
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -12,13 +12,13 @@ export default function Register() {
   const [birthDate, setBirthDate] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleRegister = async (e) => {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
-    const response = await fetch('/api/register', {
+    const response = await fetch('https://johandler.fly.dev/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password, firstName, lastName, address, birthDate }),
+      body: JSON.stringify({ email, password, firstName, lastName, address, birthDate }),
     });
 
     const data = await response.json();
@@ -82,16 +82,16 @@ export default function Register() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
-              id="username"
+              id="email"
               className="mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               type="email"
               placeholder="Digite seu Email"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-6">

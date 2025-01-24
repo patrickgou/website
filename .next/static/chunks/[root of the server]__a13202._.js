@@ -567,7 +567,7 @@ var _s = __turbopack_refresh__.signature();
 function Register() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const [username, setUsername] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
+    const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [firstName, setFirstName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const [lastName, setLastName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
@@ -576,13 +576,13 @@ function Register() {
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])('');
     const handleRegister = async (e)=>{
         e.preventDefault();
-        const response = await fetch('/api/register', {
+        const response = await fetch('https://johandler.fly.dev/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                username,
+                email,
                 password,
                 firstName,
                 lastName,
@@ -733,7 +733,7 @@ function Register() {
                             className: "mb-4",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                    htmlFor: "username",
+                                    htmlFor: "email",
                                     className: "block text-sm font-medium text-gray-700",
                                     children: "Email"
                                 }, void 0, false, {
@@ -742,12 +742,12 @@ function Register() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                    id: "username",
+                                    id: "email",
                                     className: "mt-1 block w-full px-3 py-2 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm",
                                     type: "email",
                                     placeholder: "Digite seu Email",
-                                    value: username,
-                                    onChange: (e)=>setUsername(e.target.value)
+                                    value: email,
+                                    onChange: (e)=>setEmail(e.target.value)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Register.tsx",
                                     lineNumber: 88,
@@ -824,7 +824,7 @@ function Register() {
         columnNumber: 5
     }, this);
 }
-_s(Register, "gmmsVPUEkhvYek95yKtbhvu6kzw=", false, function() {
+_s(Register, "ACu1mBZ3AG+9rtbs2PSQ8aP4ELk=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
