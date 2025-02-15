@@ -170,7 +170,7 @@ function Login() {
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react__$5b$external$5d$__$28$react$2c$__cjs$29$__["useState"])('');
     const handleLogin = async (e)=>{
         e.preventDefault();
-        const response = await fetch('https://johandler.fly.dev/api/auth/login', {
+        const response = await fetch('http://localhost:3000/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

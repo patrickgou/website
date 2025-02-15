@@ -3,6 +3,7 @@ import { useState } from 'react';
 import React from 'react';
 
 export default function Register() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +16,7 @@ export default function Register() {
   const handleRegister = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
-    const response = await fetch('https://johandler.fly.dev/api/auth/register', {
+    const response = await fetch('https://dev.your-api-server.com/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password, firstName, lastName, address, birthDate }),
